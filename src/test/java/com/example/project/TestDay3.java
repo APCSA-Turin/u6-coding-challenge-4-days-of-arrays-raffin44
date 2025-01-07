@@ -17,13 +17,12 @@ public class TestDay3 {
         assertEquals(size, snowflake.length, "Snowflake grid should have the correct number of rows");
         assertEquals(size, snowflake[0].length, "Snowflake grid should have the correct number of columns");
 
-        // Check if the center is marked with a star
         assertEquals("*", snowflake[size / 2][size / 2], "Center of the snowflake should be a star");
     }
 
     @Test
     public void testGenerateSnowflakeSmallSize() {
-        int size = 5; // Small odd size
+        int size = 5; 
         String[][] snowflake = Day3.generateSnowflake(size);
 
         assertNotNull(snowflake, "Snowflake grid should not be null");
@@ -33,7 +32,7 @@ public class TestDay3 {
 
     @Test
     public void testGenerateSnowflakeDesign() {
-        int size = 7; // Small odd size
+        int size = 7;
         String[][] snowflake = Day3.generateSnowflake(size);
         String[][] check = {
             {"*"," "," ","*"," "," ","*"},
@@ -47,4 +46,4 @@ public class TestDay3 {
         assertTrue(Arrays.deepEquals(snowflake, check), "Snowflake design is incorrect");
     }
 
-}
+} 
